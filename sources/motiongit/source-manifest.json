@@ -1,0 +1,59 @@
+{
+  "read_date": "2026-11-17",
+  "sources": [
+    {
+      "url": "https://motiongit.com/schema/motion/0.1.json",
+      "status": 200,
+      "bytes": 12493,
+      "sha256": "56a884c1f85ca8f988d98491b6dabe9c88b0fe590c7d3db05d2d175d5d645048",
+      "final_url": "https://motiongit.com/schema/motion/0.1.json",
+      "schema_id": "https://motiongit.com/schema/motion/0.1.json",
+      "schema_draft": "https://json-schema.org/draft/2020-12/schema",
+      "required": [
+        "format",
+        "specVersion",
+        "template",
+        "runtime",
+        "output"
+      ],
+      "additionalProperties": true
+    },
+    {
+      "url": "https://motiongit.com/spec.md",
+      "status": 200,
+      "bytes": 20014,
+      "sha256": "ece538a071c1612208c0044b08d95679651018d67f6b177bf895971dec00c34d",
+      "final_url": "https://motiongit.com/spec.md"
+    },
+    {
+      "url": "https://motiongit.com/ai.md",
+      "status": 200,
+      "bytes": 12072,
+      "sha256": "44b926ece5788afa7594a7ba22649459565257f936a357c5160098b8852f34e8",
+      "final_url": "https://motiongit.com/ai.md"
+    },
+    {
+      "url": "https://motiongit.com/spec/history",
+      "status": 200,
+      "bytes": 20432,
+      "sha256": "84a8fd3823a5a9bef57c06adb345c5965dcb8af5170adcd17b45251e263ec13c",
+      "final_url": "https://motiongit.com/spec/history"
+    },
+    {
+      "url": "https://motiongit.com/spec/personal",
+      "status": 200,
+      "bytes": 53288,
+      "sha256": "0ffcb085a519dda881c766e62dcc92d9e9591692bcdc2dd5f11085cb09059767",
+      "final_url": "https://motiongit.com/spec/personal"
+    }
+  ],
+  "content_schema_bundled": "skills/motion-template-studio/assets/schemas/motion.schema.json",
+  "official_helper": {
+    "profile": "motiongit.assistant-runtime/1",
+    "helperVersion": "1.0.0-rc.57",
+    "sha256": "1f239f5688b21ded0cefe2c583d1704ee3c35ea22421ca9ab7929f92502b7ff9",
+    "bytes": 893055,
+    "minimumNode": 22
+  },
+  "docs_policy": "Independent operational summaries, not complete article reproduction; public author helper not redistributed; user personal packages never included."
+}

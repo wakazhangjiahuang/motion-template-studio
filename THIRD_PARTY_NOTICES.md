@@ -1,7 +1,9 @@
-# 第三方依据
+# 许可与来源
 
-assets/schemas/motion.schema.json来自https://motiongit.com/schema/motion/0.1.json，仅为格式互操作校验保留原始字节，SHA256=56a884c1f85ca8f988d98491b6dabe9c88b0fe590c7d3db05d2d175d5d645048。未对该规范文件重新授予MIT许可。
+本仓库原创Skill、脚本、配方和说明使用根LICENSE。sources/adu-motion-video保留MIT LICENSE及THIRD_PARTY.md；并非重新授权上游字体、音乐、图片或商标。
 
-公开MotionGit工具未打入发行包；使用时从官网获取并核验，离线测试副本由操作者明确提供。保留其原有第三方许可。
+MotionGit原始内容Schema用于格式互操作，保留原字节、来源和摘要，不将其改标为本仓库MIT。规范网页正文不整篇复制；原创摘要链接到一手资料。官方作者工具和受保护个人下载包未再分发。
 
-assets/starter和本技能原创脚本按MIT许可；外部项目仅按记录许可使用，不代表其商标、字体、音乐、人物素材可自由再分发。
+其他项目未打入源码：详细定位、许可和接入边界见docs/external-sources.md。Overlay Studio为自定义受限源码许可，未作为可分发组件。Atlas、IdeaRocket仅保留链接和原创说明。
+
+依赖jsonschema、MCP SDK、Playwright、浏览器、FFmpeg由操作者按其原许可安装，未包含其二进制。
