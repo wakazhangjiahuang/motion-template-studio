@@ -1,0 +1,13 @@
+interface:
+  display_name: Motion 模板创建与校正工作室
+  short_description: 从目标视频重建可复用motion模板，并检查结构、参数、运行与交付证据
+  default_prompt: 使用 $motion-template-studio，将我上传的目标视频制作成完整可复用的 .motion 模板，附使用说明、预览和真实验证；已有模板则先检查并校正。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

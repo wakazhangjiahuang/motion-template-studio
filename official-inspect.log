@@ -1,0 +1,13 @@
+diagnostic-one.motion  sha256 1a801be01391e4941263fc4e051ca5bdb523dcdd3e4e9b7b2681af129dbb49be  12 files  spec 0.1.0-draft.1
+Diagnostic scaffold  v0.1.0  html-canvas/1
+  ✓ 包结构与路径安全
+  ✓ 根清单 motion.json
+  ✓ 参数契约与样式分支
+  ✓ 用户引导与时长适配
+  ✓ 文件完整性
+  ✓ 个人信息与凭据
+  ✓ 说明与许可
+  ! 制作来源
+    ! 制作来源为 codex；建议使用 Claude，不按工具名称限制上传，最终以效果审核为准。  motion.json
+
+通过：可以上传到 https://motiongit.com/publish

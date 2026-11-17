@@ -1,0 +1,80 @@
+[
+  {
+    "repo": "veedstudio/open-edit",
+    "name": "OpenEdit",
+    "url": "https://github.com/veedstudio/open-edit",
+    "commit": "e4dc93892268eaf04b64386935ba6e53098a5c79",
+    "license": "Apache-2.0",
+    "decision": "独立适配",
+    "usage": "后期字幕、素材剪辑、HTML动效与渲染流程候选",
+    "boundary": "CLI与浏览器渲染路线；转写可选本地或服务端，付费能力不是前期必需项",
+    "files": "cli/src/render/timing.ts；cli/src/render/footage.ts；.github/README.md",
+    "verification": "定向源码/文档核读；未进行集成或运行验证",
+    "read_date": "2026-11-17"
+  },
+  {
+    "repo": "Vincentwei1021/video-shotcraft",
+    "name": "Video Shotcraft",
+    "url": "https://github.com/Vincentwei1021/video-shotcraft",
+    "commit": "42f922fe076f6428814d10f6184caf22a8b2adc2",
+    "license": "Apache-2.0",
+    "decision": "配方优先入库",
+    "usage": "前期镜头识别、动作阶段、参考实现与验收反例",
+    "boundary": "基于Remotion，不能直接视为adu或HTML/Canvas组件；本轮未安装运行",
+    "files": "references/shots/data/before-after-slider-scrub.md；对应demos",
+    "verification": "定向源码/文档核读；未进行集成或运行验证",
+    "read_date": "2026-11-17"
+  },
+  {
+    "repo": "FireRedTeam/FireRed-OpenStoryline",
+    "name": "FireRed-OpenStoryline",
+    "url": "https://github.com/FireRedTeam/FireRed-OpenStoryline",
+    "commit": "c9e945215586f45c12a61c1951ee9a8e9c43a027",
+    "license": "Apache-2.0",
+    "decision": "独立适配",
+    "usage": "后期B素材理解、剪辑编排和风格工作流候选",
+    "boundary": "MCP/剪辑Agent并非.motion作者打包器；新脚本生成与粗剪默认不纳入保留原内容流程",
+    "files": "src/open_storyline/nodes；.storyline/skills；README.md",
+    "verification": "定向源码/文档核读；未进行集成或运行验证",
+    "read_date": "2026-11-17"
+  },
+  {
+    "repo": "jeszhou/overlay-studio",
+    "name": "Overlay Studio",
+    "url": "https://github.com/jeszhou/overlay-studio",
+    "commit": "e35e1aff9dae3b3addc21f68f3bcd51f95bdc1a8",
+    "license": "自定义源码公开许可",
+    "decision": "方法参考；接入另核授权",
+    "usage": "语义选卡、SRT时间线、固定卡片参数和透明动效层",
+    "boundary": "不属于OSI开源；限制软件及修改版商业再分发和同类对外服务。私有仓库并不扩大原许可",
+    "files": "LICENSE；motion-playground/src/effects/registry.ts",
+    "verification": "定向源码/文档核读；未进行集成或运行验证",
+    "read_date": "2026-11-17"
+  },
+  {
+    "repo": "showheyohtaki/motion-prompt",
+    "name": "Motion Prompt",
+    "url": "https://github.com/showheyohtaki/motion-prompt",
+    "commit": "683ecca0548a1754ada141d10dc3a009d4c59bef",
+    "license": "MIT",
+    "decision": "术语与参考实现入库",
+    "usage": "把画面观察映射为动作名称、运镜词汇、规格与样例",
+    "boundary": "命名和样例不等于自动识别正确，也不等于任意引擎即插即用",
+    "files": "packs/motion；packs/camera；skills/motion-prompt/references/porting.md",
+    "verification": "定向源码/文档核读；未进行集成或运行验证",
+    "read_date": "2026-11-17"
+  },
+  {
+    "repo": "threeaus/creator-style-kit",
+    "name": "Creator Style Kit",
+    "url": "https://github.com/threeaus/creator-style-kit",
+    "commit": "6aeb1ba22913dbc75b3dea0f9e131cfa78422504",
+    "license": "MIT（仓库自有部分）",
+    "decision": "风格合同适配",
+    "usage": "字体、配色、构图、组件、动作与声音规则拆分",
+    "boundary": "基于HyperFrames；字体、第三方运行库和音效分开核查，不能直接套到另一运行器",
+    "files": "REFERENCE.md；styles/<id>/style.yaml；runtime/kit.js",
+    "verification": "定向源码/文档核读；未进行集成或运行验证",
+    "read_date": "2026-11-17"
+  }
+]

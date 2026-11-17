@@ -1,0 +1,41 @@
+test_case_collision (__main__.AuditTests.test_case_collision) ... ok
+test_complete_diagnostic_static_only (__main__.AuditTests.test_complete_diagnostic_static_only) ... ok
+test_duplicate_json (__main__.AuditTests.test_duplicate_json) ... ok
+test_duplicate_variant (__main__.AuditTests.test_duplicate_variant) ... ok
+test_explicit_directory_collision (__main__.AuditTests.test_explicit_directory_collision) ... ok
+test_file_directory_collision (__main__.AuditTests.test_file_directory_collision) ... ok
+test_flatten_root (__main__.AuditTests.test_flatten_root) ... ok
+test_forbidden_instructions (__main__.AuditTests.test_forbidden_instructions) ... ok
+test_guide_duration (__main__.AuditTests.test_guide_duration) ... ok
+test_guide_unknown_copy (__main__.AuditTests.test_guide_unknown_copy) ... ok
+test_integrity_extra_member (__main__.AuditTests.test_integrity_extra_member) ... ok
+test_integrity_tamper (__main__.AuditTests.test_integrity_tamper) ... ok
+test_invalid_preset (__main__.AuditTests.test_invalid_preset) ... ok
+test_missing_bundled_asset (__main__.AuditTests.test_missing_bundled_asset) ... ok
+test_missing_manifest (__main__.AuditTests.test_missing_manifest) ... ok
+test_nfc_collision (__main__.AuditTests.test_nfc_collision) ... ok
+test_other_engine_not_claimed_supported (__main__.AuditTests.test_other_engine_not_claimed_supported) ... ok
+test_overwrite_refused (__main__.AuditTests.test_overwrite_refused) ... ok
+test_personal_no_key_or_core_reads (__main__.AuditTests.test_personal_no_key_or_core_reads) ... ok
+test_reference_missing (__main__.AuditTests.test_reference_missing) ... ok
+test_remote_schema_not_retrieved (__main__.AuditTests.test_remote_schema_not_retrieved) ... ok
+test_repair_digest_new_file (__main__.AuditTests.test_repair_digest_new_file) ... ok
+test_secret_redacted (__main__.AuditTests.test_secret_redacted) ... ok
+test_stale_plan (__main__.AuditTests.test_stale_plan) ... ok
+test_strict_json_nan (__main__.AuditTests.test_strict_json_nan) ... ok
+test_symlink (__main__.AuditTests.test_symlink) ... ok
+test_traversal (__main__.AuditTests.test_traversal) ... ok
+test_unfixed_error_stays_failed (__main__.AuditTests.test_unfixed_error_stays_failed) ... ok
+test_unknown_metadata_preserved (__main__.AuditTests.test_unknown_metadata_preserved) ... ok
+test_variant_unknown_param (__main__.AuditTests.test_variant_unknown_param) ... ok
+test_wrong_content_version (__main__.AuditTests.test_wrong_content_version) ... ok
+test_new_content_input (__main__.InputAndObservationTests.test_new_content_input) ... ok
+test_observation_complete_structure_only (__main__.InputAndObservationTests.test_observation_complete_structure_only) ... ok
+test_observation_gap_rejected (__main__.InputAndObservationTests.test_observation_gap_rejected) ... ok
+test_observation_invalid_shape_reported (__main__.InputAndObservationTests.test_observation_invalid_shape_reported) ... ok
+test_search_has_no_confidence_claim (__main__.InputAndObservationTests.test_search_has_no_confidence_claim) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.936s
+
+OK

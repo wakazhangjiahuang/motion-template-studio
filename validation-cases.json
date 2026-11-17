@@ -1,0 +1,11 @@
+{
+  "profile":"motion-template-studio.validation-cases/1",
+  "cases":[
+    {"id":"author-package","operation":"audit a complete author .motion","expect":"STATIC_PASS; execution/visual/new_content remain NOT_RUN","evidence":"strict JSON, exact Schema, references, presets, asset declarations and all integrity members"},
+    {"id":"repair-integrity","operation":"tamper a diagnostic author's text, plan, repair into a new file","expect":"mismatch detected; source hash unchanged; corrected static pass; no trust upgrade","evidence":"before/source/output hashes, plan and re-audit"},
+    {"id":"personal-envelope","operation":"inspect a synthetic personal-download-v1 outer manifest","expect":"PERSONAL_PACKAGE; no credential/core reads, no repair or network","evidence":"instrumented read log and repair refusal"},
+    {"id":"visual-reference","operation":"watch reference and reconstructed preview continuously and compare same-time action phases","expect":"real scene-by-scene findings; FAIL/BLOCKED when missing","evidence":"source time and frame IDs, output hashes, motion/text/voice observations; no invented scores"},
+    {"id":"new-content","operation":"render short/normal/long text, larger lists and optional missing media","expect":"all information legible and complete, documented pagination or explicit rejection","evidence":"inputs plus actual outputs; preset validity alone insufficient"},
+    {"id":"clean-folder","operation":"extract authored package into a clean directory and follow user guide to export","expect":"no missing dependencies or author absolute paths","evidence":"environment versions, commands, preview hash, decode results; distinct user acceptance recorded separately"}
+  ]
+}

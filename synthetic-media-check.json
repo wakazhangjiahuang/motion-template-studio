@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 360,
+        "height": 640,
+        "avg_frame_rate": "30/1",
+        "duration": "3.000000",
+        "nb_read_frames": "90"
+      },
+      {
+        "codec_type": "audio",
+        "avg_frame_rate": "0/0",
+        "duration": "3.000000",
+        "nb_read_frames": "130"
+      }
+    ],
+    "format": {
+      "duration": "3.000000"
+    }
+  },
+  "sha256": "c4dcc2534f61b2cd1ecc4d32e5bb3035534e2e75ac5b45158e6613d3a7496a5b",
+  "scope": "编码与完整解码；画面、运动、所讲事实、声音内容和试听仍需另验。",
+  "visual_review": "NOT_RUN",
+  "listening": "NOT_RUN"
+}

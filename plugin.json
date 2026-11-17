@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "motion-template-studio",
+  "version": "1.0.0",
+  "description": "从参考视频重建可复用作者.motion模板，并检查、校正和验证交付文件。",
+  "author": {
+    "name": "SaZang Studio"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Motion 模板创建与校正工作室",
+        "shortDescription": "视频转模板，检查校正与验证",
+        "longDescription": "从实际目标视频建立观察证据、重建代码工程和可复用参数，生成作者.motion模板及使用说明、预览和真实验证；提供只读包检查、源哈希绑定的另存校正、本地知识检索与stdio MCP代码。内置纯Canvas诊断运行器；其它引擎需适配，视听质量以实际执行验收为准。",
+        "developerName": "SaZang Studio",
+        "category": "Creativity",
+        "capabilities": [],
+        "defaultPrompt": "使用 $motion-template-studio，将本轮上传的目标视频制作成完整可复用的 .motion 模板，附使用说明、预览和真实验证；已有作者模板则先检查并另存校正。"
+      }
+    }
+  }
+}

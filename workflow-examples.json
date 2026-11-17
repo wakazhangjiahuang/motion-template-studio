@@ -1,0 +1,9 @@
+{
+  "purpose":"Workflow acceptance examples; expectations are not claims that a real user reconstruction has passed.",
+  "examples":[
+    {"id":"video-to-template","request":"使用 $motion-template-studio，把本轮上传的完整目标视频做成可复用.motion，附使用说明和验证。","expected":"Read actual video, record evidence, reconstruct project, parameterize, render/compare, pack and re-open. Missing runtime blocks final acceptance, not evidence preservation."},
+    {"id":"audit-and-correct","request":"检查我上传的作者.motion；保留原件，有可修的问题另存校正版。","expected":"Read-only audit, SHA-bound limited repair, re-audit, real runtime/new-content checks; source and visual trust remain separate."},
+    {"id":"missing-video","request":"按上次说的视频生成模板，本轮没有附件或可读路径。","expected":"Request video/path, preserve independent work; do not infer complete scenes from history or deliver diagnostic scaffold as the requested template."},
+    {"id":"later-video-production","request":"已有.motion，用这些口播和素材做一条新MP4，不需要新模板。","expected":"Route to template-use production instructions; offer package audit only when relevant. Do not force video-to-template rebuilding or change requested deliverable."}
+  ]
+}

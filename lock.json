@@ -1,0 +1,12 @@
+{
+  "bundle_sha256": "931e5af1139aac12fdc46b4014cd6a99cf6cad979460d2edc7de3899b7f1c9c2",
+  "metadata": {
+    "profile": "motiongit.assistant-runtime/1",
+    "helperVersion": "1.0.0-rc.57",
+    "sha256": "1f239f5688b21ded0cefe2c583d1704ee3c35ea22421ca9ab7929f92502b7ff9",
+    "bytes": 893055,
+    "minimumNode": 22
+  },
+  "origin": "https://motiongit.com/skill/motiongit-skill.zip",
+  "redistribution": "Not bundled. Fresh public download is default. Offline requires an explicitly supplied official ZIP and this exact lock."
+}

@@ -1,0 +1,212 @@
+{
+  "profile": "motion-template-studio.catalog/1",
+  "version": "1.0.0",
+  "assets": [
+    {
+      "id": "deterministic-frame",
+      "type": "recipe",
+      "engine": "agnostic",
+      "title": "确定性逐帧 / 时间轴 / 独立跳帧",
+      "tags": [
+        "frame",
+        "time",
+        "seed",
+        "easing",
+        "逐帧",
+        "跳帧",
+        "时间轴"
+      ],
+      "method": "固定fps和seed；frame映射time；资源ready后renderFrame独立求值；相同frame在全新上下文应相同。",
+      "implementation": "无状态时间函数；纯Canvas starter/src/index.html有实际实现。",
+      "acceptance": "先中段→末尾→中段，与新上下文同帧像素比较；完整逐帧导出后解码。",
+      "source_id": "local-starter",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "NOT_RUN",
+      "runtime_proof": "NOT_RUN"
+    },
+    {
+      "id": "semantic-handoff",
+      "type": "recipe",
+      "engine": "adu-native",
+      "title": "物件接力 / 连续形变 / 角色叙事",
+      "tags": [
+        "接力",
+        "变形",
+        "连续",
+        "transition",
+        "authored",
+        "units"
+      ],
+      "method": "记录同一物件跨场景的位置、缩放、旋转、遮挡和交接时刻；通过作者单元与宏时间轴保持出入连续。",
+      "implementation": "读authored_units.mjs及macro_runtime.js；先核实unit数据和资源接口。",
+      "acceptance": "交接前后逐帧无闪烁、重复或突然瞬移；新文案仍保留动作顺序。",
+      "source_id": "adu-authored-units",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "NOT_RUN",
+      "runtime_proof": "NOT_RUN"
+    },
+    {
+      "id": "portrait-reflow",
+      "type": "recipe",
+      "engine": "adu-native",
+      "title": "竖屏重排 / 安全区 / 人像窗口",
+      "tags": [
+        "竖屏",
+        "portrait",
+        "layout",
+        "人像",
+        "字幕",
+        "遮挡"
+      ],
+      "method": "根据9:16信息区与主体区域重排，不裁切横版；记录字幕、窗口、动作和角标的占区。",
+      "implementation": "读references/portrait.md及实际portrait.js；与原运行入口配套。",
+      "acceptance": "最长文案与多种人像尺寸下无溢出/遮挡，头尾动作全保留。",
+      "source_id": "adu-portrait",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "NOT_RUN",
+      "runtime_proof": "NOT_RUN"
+    },
+    {
+      "id": "content-capacity",
+      "type": "validation",
+      "engine": "agnostic",
+      "title": "参数容量 / 换文案 / 不裁字",
+      "tags": [
+        "参数",
+        "容量",
+        "长文",
+        "字幕",
+        "schema",
+        "换字"
+      ],
+      "method": "公开每个参数→消费函数→容量与溢出策略；显式合并默认和preset，验证后实际渲染。",
+      "implementation": "starter tools/inputs.py演示输入校验；实际模板应新增分页/分镜实现。",
+      "acceptance": "短/常/长与超容反例；超容清晰拒绝，不能只让Schema通过。",
+      "source_id": "local-starter",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "NOT_RUN",
+      "runtime_proof": "NOT_RUN"
+    },
+    {
+      "id": "package-repair",
+      "type": "validation",
+      "engine": "agnostic",
+      "title": "作者包检查与非破坏性校正",
+      "tags": [
+        "修复",
+        "校正",
+        "integrity",
+        "sha256",
+        "motion",
+        "package"
+      ],
+      "method": "先静态audit，再源SHA绑定plan；只展平单层根目录/重算完整性，另存新包。",
+      "implementation": "scripts/motion_studio.py repair-plan/repair；个人封套阻断。",
+      "acceptance": "原始SHA不变；新包重新audit；旧计划/路径攻击拒绝；视觉依然NOT_RUN。",
+      "source_id": "local-validator",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "LOCAL_STATIC_TESTED",
+      "runtime_proof": "NOT_RUN"
+    },
+    {
+      "id": "dynamic-caption",
+      "type": "recipe",
+      "engine": "agnostic",
+      "title": "动态字幕与语义强调",
+      "tags": [
+        "字幕",
+        "对齐",
+        "口播",
+        "karaoke",
+        "关键词",
+        "highlight"
+      ],
+      "method": "真实ASR/对齐时间映射到帧；区分行/词/字高亮与弹性入场；先核对原字和口播语义。",
+      "implementation": "核心代码由目标参考重建，当前不提供已验证ASR模型；需宿主实际工具。",
+      "acceptance": "逐词听看检查；数字/专名无改写；强调不遮挡，尾词不被切断。",
+      "source_id": "source-motion-spec",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "NOT_RUN",
+      "runtime_proof": "NOT_RUN"
+    },
+    {
+      "id": "before-after-slider",
+      "type": "reference",
+      "engine": "remotion",
+      "title": "前后对比 / 滑块揭示",
+      "tags": [
+        "对比",
+        "before",
+        "after",
+        "slider",
+        "揭示",
+        "擦除"
+      ],
+      "method": "记录遮罩边界与滑块同步、两图坐标一致；排除简单整屏淡入。",
+      "implementation": "Shotcraft配方为Remotion，未移植到adu；仅作为参考候选。",
+      "acceptance": "两图相同基准；边界无漏底，拖动/时间驱动一致。",
+      "source_id": "external-shotcraft",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "NOT_RUN",
+      "runtime_proof": "NOT_RUN"
+    },
+    {
+      "id": "style-contract",
+      "type": "reference",
+      "engine": "hyperframes",
+      "title": "字体配色布局与动作合同",
+      "tags": [
+        "style",
+        "字体",
+        "配色",
+        "布局",
+        "声音"
+      ],
+      "method": "分离稳定风格规则和本期内容；规则必须映射真实渲染参数。",
+      "implementation": "Creator Style Kit是HyperFrames；需核对字体许可与独立适配。",
+      "acceptance": "改内容不改风格骨架，改主题色确实影响指定槽位。",
+      "source_id": "external-stylekit",
+      "license": "Own recipe text; upstream code subject to source license",
+      "verification": "NOT_RUN",
+      "runtime_proof": "NOT_RUN"
+    }
+  ],
+  "sources": {
+    "local-starter": {
+      "path": "skills/motion-template-studio/assets/starter/src/index.html",
+      "url": "local-original",
+      "license": "MIT",
+      "evidence": "diagnostic source, not reconstructed user video"
+    },
+    "local-validator": {
+      "path": "skills/motion-template-studio/scripts/motion_studio.py",
+      "url": "local-original",
+      "license": "MIT"
+    },
+    "adu-authored-units": {
+      "path": "sources/adu-motion-video/scripts/authored_units.mjs",
+      "url": "https://github.com/adunext/adu-motion-video/blob/4ae737a04107083288c02eab5c0861834fcc0364/scripts/authored_units.mjs",
+      "license": "MIT"
+    },
+    "adu-portrait": {
+      "path": "sources/adu-motion-video/references/portrait.md",
+      "url": "https://github.com/adunext/adu-motion-video/blob/4ae737a04107083288c02eab5c0861834fcc0364/references/portrait.md",
+      "license": "MIT"
+    },
+    "source-motion-spec": {
+      "path": "skills/motion-template-studio/references/source-contracts.md",
+      "url": "https://motiongit.com/spec",
+      "license": "Independent summary; public spec reference"
+    },
+    "external-shotcraft": {
+      "path": "docs/external-sources.md",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "license": "Apache-2.0; no code vendored"
+    },
+    "external-stylekit": {
+      "path": "docs/external-sources.md",
+      "url": "https://github.com/threeaus/creator-style-kit",
+      "license": "MIT own code; no code vendored"
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "profile": "forward-use-validation/1",
+  "created_utc": "2026-11-17T04:20:54.246323+00:00",
+  "verdict": {
+    "formal_delivery": "FAIL",
+    "candidate_delivery": "PASS",
+    "label": "待验诊断候选：仅完整性已校正",
+    "reasons": [
+      "Explicit diagnostic-only / not production designation in the package",
+      "Runtime rendering blocked by environment; no real preview, visual reuse or independent actual-client evidence",
+      "Integrity recomputation is not provenance authentication"
+    ]
+  },
+  "input": {
+    "path": "/workspace/scratch/00eb3097f43a/evidence/minimal_check_v2/tampered.motion",
+    "sha256": "84a630fd98b341eb5e213be0ea8d9d3426d39bab9ec4ea93946114cf066ad2da",
+    "preserved": true
+  },
+  "output": {
+    "path": "/workspace/scratch/00eb3097f43a/build/forward-use/corrected.motion",
+    "sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6"
+  },
+  "tools": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "jsonschema": "4.26.0",
+    "node": "v24.22.1",
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe": "ffprobe version 7.1.5-0+deb13u1 Copyright (c) 2007-2026 the FFmpeg developers",
+    "chromium": "Chromium 156.0.8078.79 built on Debian GNU/Linux 13 (trixie)"
+  },
+  "checks": [
+    {
+      "id": "original_static",
+      "status": "FAIL",
+      "input_sha256": "84a630fd98b341eb5e213be0ea8d9d3426d39bab9ec4ea93946114cf066ad2da",
+      "output_sha256": {
+        "audit-original.json": "6a6f82d6b3cbd05c54c78b99b04b68dab7768a562c70d81ca8f1ea5c17adfc4d"
+      },
+      "evidence": [
+        "audit-original.json"
+      ],
+      "scope": "src/index.html integrity.mismatch"
+    },
+    {
+      "id": "corrected_static",
+      "status": "PASS",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "audit-corrected.json": "0df12ff2894ba63ae120b0841dbc2743965ecb5b3a3c244f9749de975a679233"
+      },
+      "evidence": [
+        "audit-corrected.json"
+      ],
+      "scope": "STATIC_PASS; no findings"
+    },
+    {
+      "id": "non_destructive_repair",
+      "status": "PASS",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "repair-plan.json": "1ba56d2265a49261b4f3ac7d6da490fc7e7f75a42b9cebb203ff87ac2637bba1",
+        "repair-result.json": "b49771ff5300398dd10b7667bc95e54c530072aa2f28134ee28e69f891ccde15",
+        "archive-diff.json": "22072cf7a0e7c6595de4366a6cba71d380b80313e4e5533c7ef47a8458d5fabf"
+      },
+      "evidence": [
+        "repair-plan.json",
+        "repair-result.json",
+        "archive-diff.json"
+      ],
+      "scope": "Only integrity.json changed; original preserved"
+    },
+    {
+      "id": "clean_unpack_static",
+      "status": "PASS",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "audit-clean-use.json": "6d9ac80d13f8b2bad9b17b45663a73bcb44185283717401dc5774860f4483962"
+      },
+      "evidence": [
+        "audit-clean-use.json"
+      ],
+      "scope": "Untouched extracted package audit passes"
+    },
+    {
+      "id": "source_syntax",
+      "status": "PASS",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "source-syntax.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "commands.json": "cbdbccaa667a8ef3419a65dab69e12fc68af3db18601606264ceaba5f9f271ce"
+      },
+      "evidence": [
+        "source-syntax.stdout.log",
+        "commands.json"
+      ],
+      "scope": "node --check only; no template execution"
+    },
+    {
+      "id": "parameter_schema",
+      "status": "PASS",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "inputs/default.json": "2a9dddebddd97fbd4a3874007b83560ec029c234e65acab4737192d0c089e783",
+        "inputs/new-content.json": "d400f59f5f72abd5b5296ff23aae26011aee704b582edaf0c009f31ed6ef7291",
+        "inputs/boundary-22.json": "2429ee598badfb0514ddafd1d4c93a86595d0e98ea850fde58169ae4ee4bc084",
+        "schema-over-capacity.stderr.log": "dafdb05b8a3b19476f5b543c06644931884b0cc48ab4983de5dea233443d87b2"
+      },
+      "evidence": [
+        "inputs/default.json",
+        "inputs/new-content.json",
+        "inputs/boundary-22.json",
+        "schema-over-capacity.stderr.log"
+      ],
+      "scope": "Three inputs valid; 23-character input rejected as expected"
+    },
+    {
+      "id": "runtime_render",
+      "status": "BLOCKED",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "render-default.stdout.log": "56823459411b968a996f83e462a1c5acfe3a7b5b8e99ee6a4003bb753e27e7f6",
+        "browser-smoke.json": "cc3583161fef156b824d20da089a6a25e186ea725e58dbba12bc66648ae5df26"
+      },
+      "evidence": [
+        "render-default.stdout.log",
+        "browser-smoke.json"
+      ],
+      "scope": "Browser launch fails: socket() Operation not permitted; no preview"
+    },
+    {
+      "id": "visual_motion_review",
+      "status": "NOT_RUN",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {},
+      "evidence": [],
+      "scope": "No rendered frames; continuous review not performed"
+    },
+    {
+      "id": "encoding_full_decode",
+      "status": "NOT_RUN",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {},
+      "evidence": [],
+      "scope": "No MP4 generated"
+    },
+    {
+      "id": "new_content_visual",
+      "status": "BLOCKED",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "inputs/new-content.json": "d400f59f5f72abd5b5296ff23aae26011aee704b582edaf0c009f31ed6ef7291"
+      },
+      "evidence": [
+        "inputs/new-content.json"
+      ],
+      "scope": "Schema-only validation does not establish visual replacement"
+    },
+    {
+      "id": "independent_seek",
+      "status": "BLOCKED",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "render-default.stdout.log": "56823459411b968a996f83e462a1c5acfe3a7b5b8e99ee6a4003bb753e27e7f6"
+      },
+      "evidence": [
+        "render-default.stdout.log"
+      ],
+      "scope": "Renderer did not reach template execution"
+    },
+    {
+      "id": "reference_fidelity",
+      "status": "NOT_RUN",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {},
+      "evidence": [],
+      "scope": "No target video provided"
+    },
+    {
+      "id": "listening",
+      "status": "NOT_RUN",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {
+        "clean-use/README.md": "17e01e20884b6fb9695e76b908dbb0f684874d9d9ebdcfb0a4da728f6dfad925"
+      },
+      "evidence": [
+        "clean-use/README.md"
+      ],
+      "scope": "Package declares intentionally silent; listening not performed"
+    },
+    {
+      "id": "independent_client_trial",
+      "status": "NOT_RUN",
+      "input_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+      "output_sha256": {},
+      "evidence": [],
+      "scope": "No independent user trial in actual client"
+    }
+  ],
+  "commands": "commands.json",
+  "evidence_sha256": {
+    "audit-clean-use.stdout.log": "6d9ac80d13f8b2bad9b17b45663a73bcb44185283717401dc5774860f4483962",
+    "version-chromium.stdout.log": "bfc2c7b1a858116fb29c798136ab51f73d6ac1e93ad21caec0f93a22a52e17ac",
+    "schema-over-capacity.stderr.log": "dafdb05b8a3b19476f5b543c06644931884b0cc48ab4983de5dea233443d87b2",
+    "version-ffprobe.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "schema-default.stdout.log": "5ff9a636ea57381c8ba6a99b17178f2099df656debf33e2fd6b846449f14f0e2",
+    "schema-new-content.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-check.js": "ceb3b9965b7d1fd48ef7c262ba660296c0dc54c9c5f987e0dc8523f9d21236dd",
+    "检查与使用说明.md": "6e548993cdd9d1b03b3a3b97e3f993932bb30fd42aa9d0c6c92d7c1ff7eb2e19",
+    "schema-over-capacity.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "commands.json": "cbdbccaa667a8ef3419a65dab69e12fc68af3db18601606264ceaba5f9f271ce",
+    "source-syntax.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tool-versions.json": "802161f8966e1f35ed0981ade8909332fba9448956d488a06659a084b19201e5",
+    "schema-new-content.stdout.log": "86e9bc585d1175c16438481eb57809fc460c411bbaec92787f758bb1b392df26",
+    "schema-default.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audit-clean-use.json": "6d9ac80d13f8b2bad9b17b45663a73bcb44185283717401dc5774860f4483962",
+    "render-default.stdout.log": "56823459411b968a996f83e462a1c5acfe3a7b5b8e99ee6a4003bb753e27e7f6",
+    "audit-original.json": "6a6f82d6b3cbd05c54c78b99b04b68dab7768a562c70d81ca8f1ea5c17adfc4d",
+    "version-node.stdout.log": "249baf635bb43877fcb9422efa1a4904b702d0ddf14d3949b7cd0950d5229c81",
+    "audit-corrected.json": "0df12ff2894ba63ae120b0841dbc2743965ecb5b3a3c244f9749de975a679233",
+    "version-ffmpeg.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-node.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "corrected.motion": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+    "audit-clean-use.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repair-plan.json": "1ba56d2265a49261b4f3ac7d6da490fc7e7f75a42b9cebb203ff87ac2637bba1",
+    "source-syntax.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-ffmpeg.stdout.log": "b241942a091ee91966e5b04017a34f1f2a3bcfb1cf80a195e274db03874459d9",
+    "render-default.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doctor.stdout.log": "d086d5f1889bfe7bf2fe96096d33b1b1f62ddfc362ade22396b46f2feb4e1965",
+    "schema-boundary-22.stdout.log": "c8f725d1932fbf6539afc64f99f89873897921fd17f64d75f8931a17bedafdb6",
+    "schema-boundary-22.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "version-chromium.stderr.log": "fdbe77443b97183d8f8c33fed9fb64a168bb9b1284564caf1e1f4d30dfac1778",
+    "browser-smoke.json": "cc3583161fef156b824d20da089a6a25e186ea725e58dbba12bc66648ae5df26",
+    "archive-diff.json": "22072cf7a0e7c6595de4366a6cba71d380b80313e4e5533c7ef47a8458d5fabf",
+    "version-ffprobe.stdout.log": "02412fef1eca820a65af53c5fa03b637f92ef643783005ccf9c4b4e3a31fb699",
+    "repair-result.json": "b49771ff5300398dd10b7667bc95e54c530072aa2f28134ee28e69f891ccde15",
+    "verify_workflow.py": "7025297e2523506500c8201c24a6e9af61748f3277b3e1695dd19daebf6a9034",
+    "doctor.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/new-content.json": "d400f59f5f72abd5b5296ff23aae26011aee704b582edaf0c009f31ed6ef7291",
+    "inputs/boundary-22.json": "2429ee598badfb0514ddafd1d4c93a86595d0e98ea850fde58169ae4ee4bc084",
+    "inputs/default.json": "2a9dddebddd97fbd4a3874007b83560ec029c234e65acab4737192d0c089e783",
+    "inputs/over-capacity.json": "31771b804c1a388fecbee55b6c95cea28faf9dea592ac5edacc12a95141a1230",
+    "motion-render-ZmNa56/render-report.json": "d3992915fa82f3f8cad9a92fe87dc9d722aaf0b851770cbcecc6c2af01da3f8f",
+    "clean-use/asset-manifest.json": "02764e51b81ba9d4ca20c6e15c116db9ae4c7cd279237f0ca7d16e1ebe309708",
+    "clean-use/integrity.json": "5d00469f4449cc1d479f7efd8e84f080cb9da93917ebe382618613ce4d212d95",
+    "clean-use/README.md": "17e01e20884b6fb9695e76b908dbb0f684874d9d9ebdcfb0a4da728f6dfad925",
+    "clean-use/motion.json": "8f20ba1c4381842cef89a275a7ed1b14dc73e5b5677d806eb8e68aacc734f974",
+    "clean-use/guide.json": "2eb616cb48f32a59ad7e1b875694b08e915a49168c797765f11ee598cbb7acfa",
+    "clean-use/params.schema.json": "28802b7bde5dbfe5dc204c340eec7dbc1f0f4017263f9d403df85560048fb065",
+    "clean-use/motion.lock.json": "62424d9d66cb1d980b7f2fbe837a000c4d3de77545b3bcce1173adf22e99dd9c",
+    "host-tools/render.mjs": "5237446feed3bd02db1f95ea17cc798b83ec99074a7fe6f610369e43a62dfc0b",
+    "host-tools/provenance.json": "d7b299ffda1ce76cf87784acf6e122b163ec148e8c869e3fed3518c9256539e2",
+    "host-tools/inputs.py": "2a4dcca3fdd00df272b07472a196bd478a7bc995eb29d75fea993bbb2bf0ba4d",
+    "clean-use/presets/demo.json": "2a9dddebddd97fbd4a3874007b83560ec029c234e65acab4737192d0c089e783"
+  },
+  "network_downloads": false,
+  "published": false,
+  "installed": false,
+  "preview": {
+    "status": "BLOCKED",
+    "path": null,
+    "reason": "Chromium local socket creation is not permitted"
+  },
+  "source_review": {
+    "entry": "src/index.html",
+    "read_in_full": true,
+    "template_execution": false,
+    "note": "No external resource, network, audio/video or WebAudio code observed; no claim of provenance authenticity."
+  }
+}

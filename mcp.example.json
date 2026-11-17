@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "motion-template-studio": {
+      "command": "python",
+      "args": [
+        "/ABS/REPO/motion-template-studio/mcp/server.py"
+      ],
+      "env": {
+        "MOTION_STUDIO_KB": "/ABS/REPO/motion-template-studio",
+        "MOTION_STUDIO_WORKSPACE": "/ABS/REPO/motion-template-studio/workspaces"
+      }
+    }
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "scope": "Local synthetic tests; not user video reconstruction acceptance",
+  "cases": [
+    {
+      "test": "diagnostic-one.motion",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1a801be01391e4941263fc4e051ca5bdb523dcdd3e4e9b7b2681af129dbb49be",
+        "audit": "STATIC_PASS",
+        "visual": "NOT_RUN"
+      }
+    },
+    {
+      "test": "diagnostic-two.motion",
+      "status": "PASS",
+      "detail": {
+        "sha256": "1a801be01391e4941263fc4e051ca5bdb523dcdd3e4e9b7b2681af129dbb49be",
+        "audit": "STATIC_PASS",
+        "visual": "NOT_RUN"
+      }
+    },
+    {
+      "test": "official deterministic repack",
+      "status": "PASS",
+      "detail": "Same unmodified project and verified author helper produced identical archive bytes"
+    },
+    {
+      "test": "official inspect",
+      "status": "PASS",
+      "detail": {
+        "exit": 0,
+        "log": "official-inspect.log",
+        "independence": "Official checker; not independent from official packing rules"
+      }
+    },
+    {
+      "test": "clean folder static",
+      "status": "PASS",
+      "detail": "Clean-directory source/parameter references audited; browser runtime NOT_RUN"
+    },
+    {
+      "test": "synthetic ffmpeg creation",
+      "status": "PASS",
+      "detail": {
+        "scope": "synthetic technical fixture, not a user case"
+      }
+    },
+    {
+      "test": "complete decode and specification",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "errors": [],
+        "media": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_type": "video",
+              "width": 360,
+              "height": 640,
+              "avg_frame_rate": "30/1",
+              "duration": "3.000000",
+              "nb_read_frames": "90"
+            },
+            {
+              "codec_type": "audio",
+              "avg_frame_rate": "0/0",
+              "duration": "3.000000",
+              "nb_read_frames": "130"
+            }
+          ],
+          "format": {
+            "duration": "3.000000"
+          }
+        },
+        "sha256": "c4dcc2534f61b2cd1ecc4d32e5bb3035534e2e75ac5b45158e6613d3a7496a5b",
+        "scope": "编码与完整解码；画面、运动、所讲事实、声音内容和试听仍需另验。",
+        "visual_review": "NOT_RUN",
+        "listening": "NOT_RUN"
+      }
+    },
+    {
+      "test": "timestamp samples",
+      "status": "PASS",
+      "detail": {
+        "source_sha256": "c4dcc2534f61b2cd1ecc4d32e5bb3035534e2e75ac5b45158e6613d3a7496a5b",
+        "frames": [
+          {
+            "time_seconds": 0,
+            "file": "reference-000.png",
+            "sha256": "a097e26e0680d81c7e8fef1c4adfad82f80e633374812d830560e5c09182bf24"
+          },
+          {
+            "time_seconds": 0.5,
+            "file": "reference-001.png",
+            "sha256": "149405c0b93c30873c8b0ac2176c5f487d8bb1d10d3422316b14732c92aa44cd"
+          },
+          {
+            "time_seconds": 1.5,
+            "file": "reference-002.png",
+            "sha256": "4a72942f639911765b0509592173dd12b72d357c72667ceea3bf8979ae07cc0f"
+          },
+          {
+            "time_seconds": 2.95,
+            "file": "reference-003.png",
+            "sha256": "cd30becf8693856b8b274b49a4cdea20d2e35ff99565ad6eec37e94646b612ca"
+          }
+        ],
+        "continuous_review": "NOT_RUN",
+        "note": "抽帧不代表已完整观看。关键变化前后应追加实际相邻时间点。"
+      }
+    },
+    {
+      "test": "real MCP stdio discovery",
+      "status": "PASS",
+      "detail": {
+        "tools": [
+          "search_recipes",
+          "get_recipe",
+          "get_source_excerpt",
+          "check_compatibility",
+          "get_validation_case",
+          "audit_motion_package",
+          "plan_motion_repairs",
+          "apply_motion_repair"
+        ]
+      }
+    },
+    {
+      "test": "MCP actual search",
+      "status": "PASS",
+      "detail": {
+        "results": [
+          {
+            "asset": {
+              "id": "semantic-handoff",
+              "type": "recipe",
+              "engine": "adu-native",
+              "title": "物件接力 / 连续形变 / 角色叙事",
+              "tags": [
+                "接力",
+                "变形",
+                "连续",
+                "transition",
+                "authored",
+                "units"
+              ],
+              "method": "记录同一物件跨场景的位置、缩放、旋转、遮挡和交接时刻；通过作者单元与宏时间轴保持出入连续。",
+              "implementation": "读authored_units.mjs及macro_runtime.js；先核实unit数据和资源接口。",
+              "acceptance": "交接前后逐帧无闪烁、重复或突然瞬移；新文案仍保留动作顺序。",
+              "source_id": "adu-authored-units",
+              "license": "Own recipe text; upstream code subject to source license",
+              "verification": "NOT_RUN",
+              "runtime_proof": "NOT_RUN"
+            },
+            "match_terms": [
+              "力",
+              "接"
+            ],
+            "rank_score": 2,
+            "compatibility": "needs-adapter",
+            "verification": "NOT_RUN"
+          }
+        ],
+        "query": "接力",
+        "score_meaning": "词项匹配排序，不是识别准确率、可执行证明或质量评分。"
+      }
+    },
+    {
+      "test": "MCP exact recipe",
+      "status": "PASS",
+      "detail": {
+        "id": "package-repair",
+        "type": "validation",
+        "engine": "agnostic",
+        "title": "作者包检查与非破坏性校正",
+        "tags": [
+          "修复",
+          "校正",
+          "integrity",
+          "sha256",
+          "motion",
+          "package"
+        ],
+        "method": "先静态audit，再源SHA绑定plan；只展平单层根目录/重算完整性，另存新包。",
+        "implementation": "scripts/motion_studio.py repair-plan/repair；个人封套阻断。",
+        "acceptance": "原始SHA不变；新包重新audit；旧计划/路径攻击拒绝；视觉依然NOT_RUN。",
+        "source_id": "local-validator",
+        "license": "Own recipe text; upstream code subject to source license",
+        "verification": "LOCAL_STATIC_TESTED",
+        "runtime_proof": "NOT_RUN"
+      }
+    },
+    {
+      "test": "MCP bounded source",
+      "status": "PASS",
+      "detail": {
+        "status": "READ"
+      }
+    },
+    {
+      "test": "MCP unknown source rejected",
+      "status": "PASS",
+      "detail": {
+        "isError": true
+      }
+    },
+    {
+      "test": "MCP mismatch not called runnable",
+      "status": "PASS",
+      "detail": {
+        "recipe_id": "semantic-handoff",
+        "status": "ADAPTER_REQUIRED",
+        "declared_engine": "adu-native",
+        "target_engine": "html-canvas/1",
+        "runtime": "NOT_RUN",
+        "verification": "NOT_RUN"
+      }
+    },
+    {
+      "test": "MCP real validation case",
+      "status": "PASS",
+      "detail": {
+        "id": "new-content",
+        "operation": "render short/normal/long text, larger lists and optional missing media",
+        "expect": "all information legible and complete, documented pagination or explicit rejection",
+        "evidence": "inputs plus actual outputs; preset validity alone insufficient"
+      }
+    },
+    {
+      "test": "MCP static audit",
+      "status": "PASS",
+      "detail": {
+        "status": "STATIC_PASS"
+      }
+    },
+    {
+      "test": "MCP path escape rejected",
+      "status": "PASS",
+      "detail": {
+        "isError": true
+      }
+    },
+    {
+      "test": "MCP correction plan",
+      "status": "PASS",
+      "detail": {
+        "profile": "motion-template-studio.repair-plan/1",
+        "source_sha256": "8b1a70ad5eedae34d8e22e8ad66a5f692d3dac7383cdd48f9a3cec5f08c3c7e9",
+        "fixes": [
+          {
+            "operation": "rebuild-integrity"
+          }
+        ],
+        "audit": {
+          "tool": "motion-template-studio",
+          "version": "1.0.0",
+          "mode": "read-only-static",
+          "findings": [
+            {
+              "level": "error",
+              "code": "integrity.mismatch",
+              "message": "文件摘要不匹配",
+              "file": "README.md"
+            }
+          ],
+          "execution": "NOT_RUN",
+          "visual_review": "NOT_RUN",
+          "new_content": "NOT_RUN",
+          "template": {
+            "id": "reference-template",
+            "name": "Diagnostic scaffold",
+            "version": "0.1.0"
+          },
+          "runtime": {
+            "profile": "html-canvas/1",
+            "entry": "src/index.html",
+            "dependencyLock": "motion.lock.json"
+          },
+          "runner_supported": true,
+          "source_sha256": "8b1a70ad5eedae34d8e22e8ad66a5f692d3dac7383cdd48f9a3cec5f08c3c7e9",
+          "status": "FAIL",
+          "limits": "静态检查不证明执行、参数画面、连续运动/声音、许可所有权或独立用户验收。"
+        },
+        "limits": "仅校正作者包根目录或重算完整性；不会修复视觉、改动动画源码、伪造验签或替换资源。"
+      }
+    },
+    {
+      "test": "MCP actual non-destructive correction",
+      "status": "PASS",
+      "detail": {
+        "status": "STATIC_CORRECTED",
+        "source_sha256": "8b1a70ad5eedae34d8e22e8ad66a5f692d3dac7383cdd48f9a3cec5f08c3c7e9",
+        "output_sha256": "c4d0831c41312a15b99881cffa2fb238524536fbab7e91dc18a9bac709e30c96",
+        "fixes": [
+          {
+            "operation": "rebuild-integrity"
+          }
+        ],
+        "audit": {
+          "tool": "motion-template-studio",
+          "version": "1.0.0",
+          "mode": "read-only-static",
+          "findings": [],
+          "execution": "NOT_RUN",
+          "visual_review": "NOT_RUN",
+          "new_content": "NOT_RUN",
+          "template": {
+            "id": "reference-template",
+            "name": "Diagnostic scaffold",
+            "version": "0.1.0"
+          },
+          "runtime": {
+            "profile": "html-canvas/1",
+            "entry": "src/index.html",
+            "dependencyLock": "motion.lock.json"
+          },
+          "runner_supported": true,
+          "source_sha256": "c4d0831c41312a15b99881cffa2fb238524536fbab7e91dc18a9bac709e30c96",
+          "status": "STATIC_PASS",
+          "limits": "静态检查不证明执行、参数画面、连续运动/声音、许可所有权或独立用户验收。"
+        },
+        "trust": "重算哈希不是真实性认证；仍需实际源码/运行/画面检查。"
+      }
+    },
+    {
+      "test": "MCP existing output rejected",
+      "status": "PASS",
+      "detail": {
+        "isError": true
+      }
+    }
+  ],
+  "passed": 20,
+  "failed": 0
+}

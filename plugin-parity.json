@@ -1,0 +1,9 @@
+{
+  "plugin_url": "https://chatgpt.com/plugins/plugins_6afbd780ec108191ba336b61ad7e8bb2",
+  "private": "PRIVATE",
+  "actual_content_matches": {
+    "skills/motion-template-studio/SKILL.md": true,
+    "skills/motion-template-studio/scripts/motion_studio.py": true
+  },
+  "scope": "Main instructions and executable core read back from created private plugin and compared byte-for-byte"
+}

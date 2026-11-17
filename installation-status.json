@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "skill": {
+    "url": "https://chatgpt.com/skills?skill_id=6afbd7788b848191923990c48c7889eb",
+    "remote_files": 31,
+    "status": "installed-and-verified"
+  },
+  "plugin": {
+    "plugin_id": "plugins_6afbd780ec108191ba336b61ad7e8bb2",
+    "name": "motion-template-studio",
+    "description": "从参考视频重建可复用作者.motion模板，并检查、校正和验证交付文件。",
+    "version": "1.0.0",
+    "current_release_id": "pluginrel_6afbd782c7188191b7f37b045675e3be",
+    "scope": "USER",
+    "discoverability": "PRIVATE",
+    "plugin_url": "https://chatgpt.com/plugins/plugins_6afbd780ec108191ba336b61ad7e8bb2",
+    "release_id": "pluginrel_6afbd782c7188191b7f37b045675e3be",
+    "latest_release_id": "pluginrel_6afbd782c7188191b7f37b045675e3be",
+    "status": "created"
+  },
+  "github_remote": "Not created; user-requested upload archive",
+  "local_mcp": "Tested stdio; cloud deployment not performed"
+}

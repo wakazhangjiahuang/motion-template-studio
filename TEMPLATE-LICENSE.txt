@@ -1,0 +1,3 @@
+This diagnostic scaffold's original code is MIT licensed, Copyright (c) 2026 SaZang Studio.
+Permission is granted to use, copy, modify and distribute with this notice. Provided AS IS without warranty.
+Replace this file with the actual template and asset licensing before distributing a reconstructed work.

@@ -1,0 +1,69 @@
+{
+  "source_sha256": "84a630fd98b341eb5e213be0ea8d9d3426d39bab9ec4ea93946114cf066ad2da",
+  "corrected_sha256": "df00cd272fc4ddae31c7802203fc4dcfeafd151b29de1eea16e0b75752f501c6",
+  "members": [
+    {
+      "file": "README.md",
+      "source_sha256": "17e01e20884b6fb9695e76b908dbb0f684874d9d9ebdcfb0a4da728f6dfad925",
+      "corrected_sha256": "17e01e20884b6fb9695e76b908dbb0f684874d9d9ebdcfb0a4da728f6dfad925",
+      "changed": false
+    },
+    {
+      "file": "asset-manifest.json",
+      "source_sha256": "02764e51b81ba9d4ca20c6e15c116db9ae4c7cd279237f0ca7d16e1ebe309708",
+      "corrected_sha256": "02764e51b81ba9d4ca20c6e15c116db9ae4c7cd279237f0ca7d16e1ebe309708",
+      "changed": false
+    },
+    {
+      "file": "guide.json",
+      "source_sha256": "2eb616cb48f32a59ad7e1b875694b08e915a49168c797765f11ee598cbb7acfa",
+      "corrected_sha256": "2eb616cb48f32a59ad7e1b875694b08e915a49168c797765f11ee598cbb7acfa",
+      "changed": false
+    },
+    {
+      "file": "integrity.json",
+      "source_sha256": "13d421c49cf62c12a864b559fe0300d3097b5fc0f5594c93ffaf4be11e85aae0",
+      "corrected_sha256": "5d00469f4449cc1d479f7efd8e84f080cb9da93917ebe382618613ce4d212d95",
+      "changed": true
+    },
+    {
+      "file": "licenses/TEMPLATE-LICENSE.txt",
+      "source_sha256": "883c845b70f74b9895c35882c1e4f5a0ffb28b3ab2aa262f29a89b777d4a5041",
+      "corrected_sha256": "883c845b70f74b9895c35882c1e4f5a0ffb28b3ab2aa262f29a89b777d4a5041",
+      "changed": false
+    },
+    {
+      "file": "motion.json",
+      "source_sha256": "8f20ba1c4381842cef89a275a7ed1b14dc73e5b5677d806eb8e68aacc734f974",
+      "corrected_sha256": "8f20ba1c4381842cef89a275a7ed1b14dc73e5b5677d806eb8e68aacc734f974",
+      "changed": false
+    },
+    {
+      "file": "motion.lock.json",
+      "source_sha256": "62424d9d66cb1d980b7f2fbe837a000c4d3de77545b3bcce1173adf22e99dd9c",
+      "corrected_sha256": "62424d9d66cb1d980b7f2fbe837a000c4d3de77545b3bcce1173adf22e99dd9c",
+      "changed": false
+    },
+    {
+      "file": "params.schema.json",
+      "source_sha256": "28802b7bde5dbfe5dc204c340eec7dbc1f0f4017263f9d403df85560048fb065",
+      "corrected_sha256": "28802b7bde5dbfe5dc204c340eec7dbc1f0f4017263f9d403df85560048fb065",
+      "changed": false
+    },
+    {
+      "file": "presets/demo.json",
+      "source_sha256": "2a9dddebddd97fbd4a3874007b83560ec029c234e65acab4737192d0c089e783",
+      "corrected_sha256": "2a9dddebddd97fbd4a3874007b83560ec029c234e65acab4737192d0c089e783",
+      "changed": false
+    },
+    {
+      "file": "src/index.html",
+      "source_sha256": "418f26eb4c04bd931c3f92f30ee37ccdd8ed99bb2ddea8adf33b6fa58dc32632",
+      "corrected_sha256": "418f26eb4c04bd931c3f92f30ee37ccdd8ed99bb2ddea8adf33b6fa58dc32632",
+      "changed": false
+    }
+  ],
+  "source_code_unchanged": true,
+  "comment_removal_matches_original_claimed_digest": false,
+  "note": "Only integrity.json changed; source comment preserved. Matching an old digest does not authenticate provenance."
+}
