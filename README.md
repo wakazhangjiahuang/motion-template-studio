@@ -4,7 +4,7 @@
 
 仓库承担四项工作：帮助识别参考视频的展示方法；检索适用代码结构；检查并校正作者包；保存回归案例和真实验证证据。Skill负责组织分析和编写代码，MCP提供有边界的检索与校验工具，运行器与FFmpeg产生可复核结果。
 
-建议GitHub：`wakazhangjiahuang/motion-template-studio`，可见性 **Private**。本ZIP用于创建仓库后上传，未自动创建远程GitHub仓库。
+GitHub私有仓库：[wakazhangjiahuang/motion-template-studio](https://github.com/wakazhangjiahuang/motion-template-studio)。main已恢复规范目录；初次压平上传保留于backup/upload-flat-20261117。
 
 ## 主链路
 
@@ -63,7 +63,7 @@ flowchart TD
 
 已完成静态校验器、非破坏性修复器、诊断工程、公共官方工具核验/打包封装、视频元数据/抽帧/解码工具，以及8个实际stdio MCP工具。36项回归检查、20项实际联调检查通过；仓库独立MCP入口另通过11项协议检查。
 
-浏览器渲染在当前环境被阻断，未生成诊断工程的真实浏览器预览，未认证任意目标视频的复刻质量。诊断包仅验证打包链路；正式目标模板仍需在可运行的Codex/WorkBuddy等宿主中完成参考对照、试听、新内容与干净目录验收。MCP为本地stdio代码，未部署云服务。
+初次本地浏览器渲染受环境阻断。现已增加GitHub Actions真实浏览器测试：默认预设、中文边界文案、音轨混合、官方打包及干净目录重跑；请以最新Actions运行结果为准，未通过前不标记为完成。诊断测试不认证任意目标视频的复刻质量。诊断包仅验证打包链路；正式目标模板仍需在声明的Codex/WorkBuddy等宿主中完成参考对照、试听、新内容与干净目录验收。MCP为本地stdio代码，未部署云服务。
 
 ## 资料范围
 
