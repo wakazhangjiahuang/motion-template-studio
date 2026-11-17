@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-17",
+  "repository": "wakazhangjiahuang/motion-template-studio",
+  "visibility": "private",
+  "backup_branch": "backup/upload-flat-20261117",
+  "original_upload_commit": "f088bca207ace4e21fc0afabcf31b5d414a8a7a4",
+  "restoration_commit": "d8be2960202cb289f9a89a3eaf82d3f0caa44c2f",
+  "tested_code_commit": "cf4bcf4ff5b838a514377ab578e4a776e0008dfd",
+  "archive_restoration": {
+    "files": 1004,
+    "all_paths_and_git_blob_hashes_match": true,
+    "source_reference_files": 935
+  },
+  "verification": {
+    "installed_skill_unit_tests": 36,
+    "plugin_release_unit_tests": 36,
+    "mcp_protocol_checks": 11,
+    "matching_plugin_executable_and_resource_files": 29,
+    "registered_skill_and_plugin_readable": true
+  },
+  "github_actions": {
+    "run_id": 44041662740,
+    "url": "https://github.com/wakazhangjiahuang/motion-template-studio/actions/runs/44041662740",
+    "contracts": "success",
+    "browser_render": "success",
+    "diagnostic_artifact": "diagnostic-browser-render",
+    "artifact_id": 14309433018
+  },
+  "actual_browser_result": {
+    "scope": "Synthetic diagnostic, real browser rendering and audio encoding; no reference fidelity or listening claim",
+    "visual_reference": "NOT_RUN",
+    "listening": "NOT_RUN",
+    "checks": [
+      {
+        "id": "default-browser-render",
+        "status": "PASS",
+        "sha256": "7cb92e7be27baa4d38d06eb2531509af9a5fd80103c582ff0b83e90f64733759",
+        "seek": "PASS",
+        "full_decode": "PASS",
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 360,
+            "height": 640,
+            "avg_frame_rate": "30/1",
+            "duration": "3.000000",
+            "nb_read_frames": "90"
+          }
+        ]
+      },
+      {
+        "id": "boundary-Chinese-new-content-and-audio",
+        "status": "PASS",
+        "sha256": "2b624e1fadbafeb819df1734e3b2cb77fb179da29417d650e2dce9bb43bc7619",
+        "seek": "PASS",
+        "full_decode": "PASS",
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 360,
+            "height": 640,
+            "avg_frame_rate": "30/1",
+            "duration": "3.000000",
+            "nb_read_frames": "90"
+          },
+          {
+            "codec_type": "audio",
+            "avg_frame_rate": "0/0",
+            "duration": "3.000000",
+            "nb_read_frames": "130"
+          }
+        ]
+      },
+      {
+        "id": "over-capacity-rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "fresh-official-author-pack",
+        "status": "PASS",
+        "sha256": "34752d5b56c6e79e6021b4be837bbc5db07eb7ecf4773388ae611b3db08cb0f6"
+      },
+      {
+        "id": "clean-folder-real-browser-replay",
+        "status": "PASS",
+        "sha256": "7cb92e7be27baa4d38d06eb2531509af9a5fd80103c582ff0b83e90f64733759",
+        "seek": "PASS",
+        "full_decode": "PASS",
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 360,
+            "height": 640,
+            "avg_frame_rate": "30/1",
+            "duration": "3.000000",
+            "nb_read_frames": "90"
+          }
+        ]
+      },
+      {
+        "id": "clean-replay-decoded-frame-hashes",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS",
+    "node": "v22.23.4",
+    "python": "3.12.16",
+    "browser": "151.0.7922.34"
+  },
+  "limits": [
+    "Synthetic diagnostic only; not an actual user reference-video recreation acceptance",
+    "No human listening or reference fidelity acceptance was performed",
+    "Local stdio MCP code is verified, not a deployed cloud endpoint"
+  ],
+  "retained_history": "verification/summary.json and render-blocked.json are first-build historical results; this file records the new GitHub-hosted render verification."
+}

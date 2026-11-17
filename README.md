@@ -57,13 +57,14 @@ flowchart TD
 - 规范和adu架构：技能 `references/source-contracts.md`。
 - 运行与检查：`docs/local-setup.md`；MCP：`mcp.example.json`。
 - GitHub上传：`docs/github-upload.md`。
-- 实测报告：`verification/summary.json`、`verification/unit-test.log`、`verification/integration-results.json`。
+- 当前实测报告：`verification/current-check.json`；原始构建历史：`verification/summary.json`。
+- 完整启动Prompt：`docs/start-prompt.md`。
 
 ## 本次交付状态
 
 已完成静态校验器、非破坏性修复器、诊断工程、公共官方工具核验/打包封装、视频元数据/抽帧/解码工具，以及8个实际stdio MCP工具。36项回归检查、20项实际联调检查通过；仓库独立MCP入口另通过11项协议检查。
 
-初次本地浏览器渲染受环境阻断。现已增加GitHub Actions真实浏览器测试：默认预设、中文边界文案、音轨混合、官方打包及干净目录重跑；请以最新Actions运行结果为准，未通过前不标记为完成。诊断测试不认证任意目标视频的复刻质量。诊断包仅验证打包链路；正式目标模板仍需在声明的Codex/WorkBuddy等宿主中完成参考对照、试听、新内容与干净目录验收。MCP为本地stdio代码，未部署云服务。
+初次本地浏览器渲染受环境阻断；现已在GitHub实际环境通过6项浏览器/音频/打包与干净目录重跑检查，详见verification/current-check.json和[Actions实测](https://github.com/wakazhangjiahuang/motion-template-studio/actions/runs/44041662740)。诊断测试不认证任意目标视频的复刻质量。诊断包仅验证打包链路；正式目标模板仍需在声明的Codex/WorkBuddy等宿主中完成参考对照、试听、新内容与干净目录验收。MCP为本地stdio代码，未部署云服务。
 
 ## 资料范围
 
